@@ -5,12 +5,12 @@
       "error":"/var/log/xray/error.log"
    },
     "inbounds": [{
-        "port": PORT,
+        "port": 8888,
         "protocol": "vmess",
         "settings": {
             "clients": [{
-                "id": "$UUID",
-                "alterId": 0
+                "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
+                "alterId": 64
             }]
         },
         "streamSettings": {
