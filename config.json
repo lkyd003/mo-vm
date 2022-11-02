@@ -1,13 +1,7 @@
 {
-  "log":{
-      "loglevel":"warning",
-      "access":"/var/log/xray/access.log",
-      "error":"/var/log/xray/error.log"
-   },
-{
   "inbounds": [
     {
-      "port": 8888, // 服务器监听端口
+      "port": PORT, // 服务器监听端口
       "protocol": "vmess",    // 主传入协议
       "settings": {
         "clients": [
@@ -25,5 +19,4 @@
       "settings": {}
     }
   ]
-}
 }
