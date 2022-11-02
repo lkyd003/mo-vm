@@ -1,24 +1,22 @@
 {
-  "log":{
-      "loglevel":"warning",
-      "access":"/var/log/xray/access.log",
-      "error":"/var/log/xray/error.log"
-   },
-    "inbounds": [{
-        "port": 8888,
-        "protocol": "vmess",
-        "settings": {
-            "clients": [{
-                "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
-                "alterId": 64
-            }]
-        },
-        "streamSettings": {
-            "network": "ws",
-           }
-    }],
-    "outbounds": [{
-        "protocol": "freedom"
+  "inbounds": [
+    {
+      "port": 8888, // 服务器监听端口
+      "protocol": "vmess",    // 主传入协议
+      "settings": {
+        "clients": [
+          {
+            "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",  // 用户 ID，客户端与服务器必须相同
+            "alterId": 64
+          }
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",  // 主传出协议
+      "settings": {}
     }
   ]
 }
